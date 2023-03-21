@@ -7,3 +7,4 @@
 6-abs.c: contains a function computes the absolute value of an integer
 7-print_last_digit.c : contains a function that prints the last digit of a number
 10-add.c : contains a function that adds two integers and return the result
+11-print_to_98.c contains a function taht prints all natural numbers from n to 98
