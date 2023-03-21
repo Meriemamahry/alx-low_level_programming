@@ -6,6 +6,4 @@
 5-sign.c contains a function that prints the sign of a number
 6-abs.c: contains a function computes the absolute value of an integer
 7-print_last_digit.c : contains a function that prints the last digit of a number
-8-24_hours.c : contains a function that prints every minute of the day
-9-times_table.c : contains a function that prints  the 9 times table startin with 0
-
+10-add.c : contains a function that adds two integers and return the result
