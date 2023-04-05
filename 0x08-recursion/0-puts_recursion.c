@@ -1,16 +1,16 @@
 #include "main.h"
 /**
  * puts_recursion - prints a string followed by a new line
- * @s : string 
+ * @s: string
  * Return : void
  */
 void _puts_recurion(char *s)
 {
-	if(*s=='\0')
+	if (*s == '\0')
 	{
 		_putchar('\n');
 		return;
 	}
 	_putchar(*s);
-	_puts_recurion(s+1);
+	_puts_recurion(s + 1);
 }
