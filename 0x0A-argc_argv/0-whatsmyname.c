@@ -6,7 +6,7 @@
 *@argv: argument verctor
 *Rreturn: return 0
 */
-void main(int argc, char* argv[])
+void main(int argc, char *argv[])
 {
 	printf("%s\n", argv[argc * 0]);
 	return (0);
