@@ -5,7 +5,7 @@
  * @argv: string
  * @argc: number of parameters
  * Return: 0
- * */
+ */
 int main(int argc, char const *argv[])
 {
 	(void)argv;
