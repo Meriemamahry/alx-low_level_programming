@@ -5,10 +5,11 @@
 *main - print the name of the program
 *@argc: number of command line argument
 *@argv: argument verctor
-*Rreturn: return 0
+*Return: return 0
 */
-int main(int argc, char *argv[])
+int main(int argc, char const *argv[])
 {
-	printf("%s\n", argv[argc * 0]);
+	(void)argc;
+	printf("%s\n", argv[0]);
 	return (0);
 }
