@@ -1,24 +1,36 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-/**
- * main - multiplies 2 numbers
- * @argv: string
- * @argc: number of parameters
- * Return: 0
- */
-int main(int argc, char const *argv[])
-{
-	if (argc < 3)
-	{
-		printf("error\n");
-		return (-1);
-	}
-	else
-	{
-		int mul;
+#include <unistd.h>
 
-		mul = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", mul);
+/**
+ * _atoi - function that convert a string to an integer.
+ * @s: arg 1.
+ * Return: an integer.
+ */
+int _atoi(char *s)
+{
+	unsigned int	n;
+	int				sign;
+	int				i;
+
+	n = 0;
+	i = 0;
+	sign = 0;
+	while (s[i] && (s[i] == '+' || s[i] == '-' || s[i] == ' ' || s[i] == '\t'))
+	{
+		if (s[i] == '-')
+			sign++;
+		i++;
 	}
-}	return (0);
+	while (s[i] && (s[i] < '0' || s[i] > '9'))
+		i++;
+	while (s[i] && s[i] >= '0' && s[i] <= '9')
+	{
+		n *= 10;
+		n += s[i] - '0';
+		i++;
+	}
+	if (sign % 2 == 0)
+		return (n);
+	return (-n);
+}
