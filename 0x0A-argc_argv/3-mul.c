@@ -1,36 +1,24 @@
 #include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
-#include <unistd.h>
-
 /**
- * _atoi - function that convert a string to an integer.
- * @s: arg 1.
- * Return: an integer.
- */
-int _atoi(char *s)
+  *main - entry
+  *@argv : the string from the terminal
+  *@argc : the number of parametres
+  *Return: 0
+  */
+int main(int argc, char const *argv[])
 {
-	unsigned int	n;
-	int				sign;
-	int				i;
-
-	n = 0;
-	i = 0;
-	sign = 0;
-	while (s[i] && (s[i] == '+' || s[i] == '-' || s[i] == ' ' || s[i] == '\t'))
-	{
-		if (s[i] == '-')
-			sign++;
-		i++;
-	}
-	while (s[i] && (s[i] < '0' || s[i] > '9'))
-		i++;
-	while (s[i] && s[i] >= '0' && s[i] <= '9')
-	{
-		n *= 10;
-		n += s[i] - '0';
-		i++;
-	}
-	if (sign % 2 == 0)
-		return (n);
-	return (-n);
+if (argc < 3)
+{
+printf("Error\n");
+return (-1);
+}
+else
+{
+int mul;
+mul = atoi(argv[1]) * atoi(argv[2]);
+printf("%d\n", mul);
+}
+return (0);
 }
