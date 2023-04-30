@@ -2,20 +2,6 @@
 #define LISTS_H
 #include <stdlib.h>
 #include <stdio.h>
-
-/**
- * struct list_s - a singly linked list
- * @str: string
- * @len: its length
- * @next: pointer to the next node
- */
-typedef struct list_s
-{
-	char *str;
-	unsigned int len;
-	struct list_s *next;
-} list_t;
-
 /**
  * struct listint_s - a singly linked list
  * @n: an integer
