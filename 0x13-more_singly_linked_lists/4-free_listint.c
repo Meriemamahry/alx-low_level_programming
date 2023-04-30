@@ -1,7 +1,8 @@
 #include "lists.h"
+
 /**
- *free_listint - frees memory
- *@head: pointer to the head
+ * free_listint - frees memory of the first element of listint
+ * @head: pointer to the first elemnt of lisint
  */
 void free_listint(listin_t *head)
 {
@@ -9,8 +10,8 @@ void free_listint(listin_t *head)
 
 	while (head)
 	{
-		cell = head->next;
-		free(head);
-		head = cell;
+		cell = head;
+		head = head->next;
+		free(cell);
 	}
 }
