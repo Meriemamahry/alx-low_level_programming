@@ -9,37 +9,23 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int i;
-	int j;
-	int k;
-	unsigned int c = 0;
+	unsigned int s = 0;
+	unsigned int p = 1;
+	int i = 0;
 
-	if (b == 0)
-	{
+	if (!b)
 		return (0);
-	}
-	i = 0;
-	while (b[i] != 0)
-	{
-		if (b[i] != 48 && b[i] != 49)
-		{
-			return (0);
-		}
+	while (b[i])
 		i++;
-	}
-	i = i - 1;
-	for (j = 0; i >= 0; j++, i--)
+	i--;
+	while (i >= 0)
 	{
-		if (b[i] == 48)
-		{
-			binary = 0;
-		}
-		else if (b[i] == 49)
-		{
-			k = 1;
-		}
-		k = k << j;
-		c = c | k;
+		if (b[i] != '0' && b[i] != '1')
+			return (0);
+		if (b[i] == '1')
+			s += p;
+		i--;
+		p += p;
 	}
-	return (c);
+	return (s);
 }
